@@ -39,6 +39,6 @@ public class WebSocMessageController {
         messageRepository.save(messageEntity);
 
         // Broadcast to subscribers in the room
-        messagingTemplate.convertAndSend("/chat/" + chatMessage.getRoom(), chatMessage);
+        messagingTemplate.convertAndSend("/chat/room/" + chatMessage.getRoom(), chatMessage);
     }
 }

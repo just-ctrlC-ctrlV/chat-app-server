@@ -1,0 +1,1 @@
+2025-05-22 00:15:55 DEBUG [clientInboundChannel-7] org.hibernate.SQL - insert into message (content,room_id,sender_id,timestamp) values (?,?,?,?)

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"/>
+
+    <!-- Hibernate logs -->
+    <appender name="HIBERNATE_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/hibernate.log</file>
+        <append>false</append> <!-- overwrite on restart -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/hibernate.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Kafka logs -->
+    <appender name="KAFKA_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/kafka.log</file>
+        <append>false</append> <!-- overwrite on restart -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/kafka.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Application logs -->
+    <appender name="APP_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/app.log</file>
+        <append>false</append> <!-- overwrite on restart -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/app.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+<!--    <logger name="org.hibernate" level="DEBUG" additivity="false">-->
+<!--        <appender-ref ref="HIBERNATE_FILE"/>-->
+<!--    </logger>-->
+
+    <!-- SQL queries -->
+    <logger name="org.hibernate.SQL" level="DEBUG" additivity="false">
+        <appender-ref ref="HIBERNATE_FILE"/>
+    </logger>
+
+    <!-- Bind parameter values -->
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" additivity="false">
+        <appender-ref ref="HIBERNATE_FILE"/>
+    </logger>
+
+    <logger name="org.apache.kafka" level="INFO" additivity="false">
+        <appender-ref ref="KAFKA_FILE"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="APP_FILE"/>
+    </root>
+</configuration>
