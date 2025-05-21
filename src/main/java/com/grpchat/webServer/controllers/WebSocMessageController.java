@@ -1,44 +1,49 @@
 package com.grpchat.webServer.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.stereotype.Controller;
-
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.grpchat.webServer.services.KafkaProducerService;
 import com.grpchat.webServer.model.ChatMessageModel;
 import com.grpchat.webServer.entity.Message;
 import com.grpchat.webServer.repository.MessageRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.Payload;
+import org.springframework.stereotype.Controller;
 
 import java.time.LocalDateTime;
 
 @Controller
 public class WebSocMessageController {
 
-    private final SimpMessagingTemplate messagingTemplate;
     private final MessageRepository messageRepository;
+    private final KafkaProducerService kafkaProducerService;
+    private final ObjectMapper objectMapper;
 
     @Autowired
-    public WebSocMessageController(SimpMessagingTemplate messagingTemplate,
-                                   MessageRepository messageRepository) {
-        this.messagingTemplate = messagingTemplate;
+    public WebSocMessageController(MessageRepository messageRepository, KafkaProducerService kafkaProducerService) {
         this.messageRepository = messageRepository;
+        this.kafkaProducerService = kafkaProducerService;
+        this.objectMapper = new ObjectMapper(); // for JSON serialization
     }
 
     @MessageMapping("/chat.sendMessage")
-    public void sendMessage(@Payload ChatMessageModel chatMessage) {
+    public void sendMessage(@Payload ChatMessageModel chatMessage) throws JsonProcessingException {
 
-        // Convert ChatMessageModel to JPA entity
-        Message messageEntity = new Message();
-        messageEntity.setSenderId(chatMessage.getSender());
-        messageEntity.setContent(chatMessage.getContent());
-        messageEntity.setRoomId(chatMessage.getRoom());
-        messageEntity.setTimestamp(LocalDateTime.now());
-
-        // Save to Postgres SQL
+        //Save message to PG
+        Message messageEntity = new Message(
+                chatMessage.getSender(),
+                chatMessage.getContent(),
+                chatMessage.getRoom(),
+                LocalDateTime.now()
+        );
         messageRepository.save(messageEntity);
 
-        // Broadcast to subscribers in the room
-        messagingTemplate.convertAndSend("/chat/room/" + chatMessage.getRoom(), chatMessage);
+        // to JSON
+        String jsonMessage = objectMapper.writeValueAsString(chatMessage);
+
+        // Publish to Kafka
+        kafkaProducerService.sendToTopic(jsonMessage);
     }
 }
