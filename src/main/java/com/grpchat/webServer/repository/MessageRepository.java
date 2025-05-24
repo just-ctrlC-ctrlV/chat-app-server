@@ -1,6 +1,10 @@
 package com.grpchat.webServer.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.grpchat.webServer.entity.Message;
+import com.grpchat.webServer.entity.MessageEntity;
 
-public interface MessageRepository extends JpaRepository<Message, Long> {}
+import java.util.List;
+
+public interface MessageRepository extends JpaRepository<MessageEntity, Long> {
+    List<MessageEntity> findByRoomId(String roomId);
+}

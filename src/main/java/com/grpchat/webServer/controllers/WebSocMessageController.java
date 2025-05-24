@@ -2,9 +2,9 @@ package com.grpchat.webServer.controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.grpchat.webServer.services.KafkaProducerService;
-import com.grpchat.webServer.model.ChatMessageModel;
-import com.grpchat.webServer.entity.Message;
+import com.grpchat.webServer.services.kafka.KafkaProducerService;
+import com.grpchat.webServer.model.MessageModel;
+import com.grpchat.webServer.entity.MessageEntity;
 import com.grpchat.webServer.repository.MessageRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +29,10 @@ public class WebSocMessageController {
     }
 
     @MessageMapping("/chat.sendMessage")
-    public void sendMessage(@Payload ChatMessageModel chatMessage) throws JsonProcessingException {
+    public void sendMessage(@Payload MessageModel chatMessage) throws JsonProcessingException {
 
-        //Save message to PG
-        Message messageEntity = new Message(
+        //Save messages to PG
+        MessageEntity messageEntity = new MessageEntity(
                 chatMessage.getSender(),
                 chatMessage.getContent(),
                 chatMessage.getRoom(),
@@ -40,9 +40,8 @@ public class WebSocMessageController {
         );
         messageRepository.save(messageEntity);
 
-        // to JSON
+        // to String
         String jsonMessage = objectMapper.writeValueAsString(chatMessage);
-
         // Publish to Kafka
         kafkaProducerService.sendToTopic(jsonMessage);
     }

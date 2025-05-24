@@ -1,7 +1,7 @@
-package com.grpchat.webServer.services;
+package com.grpchat.webServer.services.kafka;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.grpchat.webServer.model.ChatMessageModel;
+import com.grpchat.webServer.model.MessageModel;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -22,7 +22,7 @@ public class KafkaConsumerService {
     public void listen(String message) {
         try {
             // Parse the JSON message into a ChatMessageModel
-            ChatMessageModel chatMessage = objectMapper.readValue(message, ChatMessageModel.class);
+            MessageModel chatMessage = objectMapper.readValue(message, MessageModel.class);
 
             // Broadcast to clients subscribed to the specific room
             String destination = "/chat/room/" + chatMessage.getRoom();
