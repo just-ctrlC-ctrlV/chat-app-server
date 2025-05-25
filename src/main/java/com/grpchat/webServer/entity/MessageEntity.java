@@ -25,11 +25,20 @@ public class MessageEntity {
     @JsonProperty("content")
     private String content;
     private LocalDateTime timestamp;
+    private Boolean isFile;
+    private String fileName;
+    private String mimeType;
+    private String replyOn;
 
-    public MessageEntity(String sender, String content, String room, LocalDateTime timestamp) {
+
+    public MessageEntity(String sender, String content, String room, LocalDateTime timestamp,Boolean isFile,String fileName,String mimeType,String replyOn) {
         this.senderId = sender;
         this.content = content;
         this.roomId = room;
         this.timestamp = timestamp;
+        this.isFile = isFile;
+        this.fileName = fileName;
+        this.mimeType = mimeType;
+        this.replyOn = replyOn;
     }
 }

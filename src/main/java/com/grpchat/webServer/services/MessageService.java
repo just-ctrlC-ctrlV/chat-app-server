@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 public class MessageService {
     private final MessageRepository messageRepository;
     private final ObjectMapper objectMapper;
+
     @Autowired
     public MessageService(MessageRepository messageRepository, ObjectMapper objectMapper) {
         this.messageRepository = messageRepository;
@@ -21,7 +22,6 @@ public class MessageService {
     }
     public List<MessageModel> getInitialMessages(String roomId){
         List<MessageEntity> data= messageRepository.findByRoomId(roomId);
-        System.out.println(data.getFirst().getTimestamp());
         return data.stream().map(message-> objectMapper.convertValue(message,MessageModel.class)).collect(Collectors.toList());
     }
 }

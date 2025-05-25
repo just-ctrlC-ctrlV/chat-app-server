@@ -18,4 +18,12 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
     }
+
+    @Override
+    public void configureWebSocketTransport(WebSocketTransportRegistration registration) {
+        registration
+                .setMessageSizeLimit(10 * 1024 * 1024)       // 10 MB
+                .setSendBufferSizeLimit(10 * 1024 * 1024)    // 10 MB
+                .setSendTimeLimit(20000);                    // Optional, in milliseconds
+    }
 }

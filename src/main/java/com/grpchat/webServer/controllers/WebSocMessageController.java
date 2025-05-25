@@ -30,13 +30,17 @@ public class WebSocMessageController {
 
     @MessageMapping("/chat.sendMessage")
     public void sendMessage(@Payload MessageModel chatMessage) throws JsonProcessingException {
-
+        System.out.println("Received message: " + chatMessage.getFileName());
         //Save messages to PG
         MessageEntity messageEntity = new MessageEntity(
                 chatMessage.getSender(),
                 chatMessage.getContent(),
                 chatMessage.getRoom(),
-                LocalDateTime.now()
+                LocalDateTime.now(),
+                chatMessage.getIsFile(),
+                chatMessage.getFileName(),
+                chatMessage.getMimeType(),
+                chatMessage.getReplyOn()
         );
         messageRepository.save(messageEntity);
 

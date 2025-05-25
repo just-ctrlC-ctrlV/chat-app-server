@@ -1,9 +1,12 @@
 package com.grpchat.webServer.controllers;
 
+import com.grpchat.webServer.model.FileModel;
 import com.grpchat.webServer.model.MessageModel;
 import com.grpchat.webServer.services.ChatRoomService;
+import com.grpchat.webServer.services.FileUploadService;
 import com.grpchat.webServer.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.web.bind.annotation.*;
 import com.grpchat.webServer.model.ChatRoomModel;
 
@@ -14,12 +17,14 @@ public class RestMessageController {
 
     private final ChatRoomService chatRoomService;
     private final MessageService messageService;
+    private final FileUploadService fileUploadService;
 
 
     @Autowired
-    public RestMessageController(ChatRoomService chatRoomService, MessageService messageService) {
+    public RestMessageController(ChatRoomService chatRoomService, MessageService messageService, FileUploadService fileUploadService) {
         this.chatRoomService = chatRoomService;
         this.messageService = messageService;
+        this.fileUploadService = fileUploadService;
     }
 
     @GetMapping("/rooms")
@@ -37,9 +42,9 @@ public class RestMessageController {
         return chatRoomService.getChatRoomById(Long.parseLong(roomId));
     }
 
-    @PostMapping("/chat/room/{roomId}")
-    public String sendMessage(@PathVariable String roomId) {
-    return "Message sent to room "+roomId;
+    @PostMapping("/chat/room/{roomId}/file")
+    public void fileUpload( @Payload FileModel file) {
+        fileUploadService.saveFile(file);
     }
 
 }
