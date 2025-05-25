@@ -13,8 +13,7 @@ public class MessageModel {
         private String room;
         private LocalDateTime timestamp;
         private Boolean isFile;
-        private String fileName;
-        private String mimeType;
+        private String fileId;
         private String replyOn;
 
 }

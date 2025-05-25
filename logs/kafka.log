@@ -1,9 +1,9 @@
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
 	auto.include.jmx.reporter = true
 	bootstrap.controllers = []
 	bootstrap.servers = [localhost:9092]
 	client.dns.lookup = use_all_dns_ips
-	client.id = webServer-admin-5
+	client.id = webServer-admin-4
 	connections.max.idle.ms = 300000
 	default.api.timeout.ms = 60000
 	enable.metrics.push = true
@@ -73,15 +73,15 @@
 	ssl.truststore.password = null
 	ssl.truststore.type = JKS
 
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748177992044
-2025-05-25 18:29:52 WARN  [kafka-admin-client-thread | webServer-admin-5] o.a.k.clients.admin.KafkaAdminClient - [AdminClient clientId=webServer-admin-5] The DescribeTopicPartitions API is not supported, using Metadata API to describe topics.
-2025-05-25 18:29:52 INFO  [kafka-admin-client-thread | webServer-admin-5] o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for webServer-admin-5 unregistered
-2025-05-25 18:29:52 INFO  [kafka-admin-client-thread | webServer-admin-5] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
-2025-05-25 18:29:52 INFO  [kafka-admin-client-thread | webServer-admin-5] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2025-05-25 18:29:52 INFO  [kafka-admin-client-thread | webServer-admin-5] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748212588366
+2025-05-26 04:06:28 WARN  [kafka-admin-client-thread | webServer-admin-4] o.a.k.clients.admin.KafkaAdminClient - [AdminClient clientId=webServer-admin-4] The DescribeTopicPartitions API is not supported, using Metadata API to describe topics.
+2025-05-26 04:06:28 INFO  [kafka-admin-client-thread | webServer-admin-4] o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for webServer-admin-4 unregistered
+2025-05-26 04:06:28 INFO  [kafka-admin-client-thread | webServer-admin-4] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-05-26 04:06:28 INFO  [kafka-admin-client-thread | webServer-admin-4] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-05-26 04:06:28 INFO  [kafka-admin-client-thread | webServer-admin-4] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -89,7 +89,7 @@
 	bootstrap.servers = [localhost:9092]
 	check.crcs = true
 	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6
+	client.id = consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5
 	client.rack = 
 	connections.max.idle.ms = 540000
 	default.api.timeout.ms = 60000
@@ -99,7 +99,7 @@
 	fetch.max.bytes = 52428800
 	fetch.max.wait.ms = 500
 	fetch.min.bytes = 1
-	group.id = f804481a-0ec4-4590-afbc-91053ce0f13f
+	group.id = ca66a308-47a8-45e8-96c4-f8ba5bea1301
 	group.instance.id = null
 	group.protocol = classic
 	group.remote.assignor = null
@@ -180,28 +180,27 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748177992068
-2025-05-25 18:29:52 INFO  [restartedMain] o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Subscribed to topic(s): chat-messages
-2025-05-25 18:29:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Cluster ID: BZRcDL7gSbCCinwOtiRz5w
-2025-05-25 18:29:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2025-05-25 18:29:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] (Re-)joining group
-2025-05-25 18:29:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Request joining group due to: need to re-join with the given member-id: consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6-0fd48d54-6cfb-4da3-ac04-26f6d4f28438
-2025-05-25 18:29:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] (Re-)joining group
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Successfully joined group with generation Generation{generationId=1, memberId='consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6-0fd48d54-6cfb-4da3-ac04-26f6d4f28438', protocol='range'}
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Finished assignment for group at generation 1: {consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6-0fd48d54-6cfb-4da3-ac04-26f6d4f28438=Assignment(partitions=[chat-messages-0, chat-messages-1, chat-messages-2])}
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Successfully synced group in generation Generation{generationId=1, memberId='consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6-0fd48d54-6cfb-4da3-ac04-26f6d4f28438', protocol='range'}
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Notifying assignor about the new Assignment(partitions=[chat-messages-0, chat-messages-1, chat-messages-2])
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Adding newly assigned partitions: chat-messages-0, chat-messages-1, chat-messages-2
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Found no committed offset for partition chat-messages-0
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Found no committed offset for partition chat-messages-2
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Found no committed offset for partition chat-messages-1
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Found no committed offset for partition chat-messages-0
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Found no committed offset for partition chat-messages-2
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Found no committed offset for partition chat-messages-1
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Resetting offset for partition chat-messages-0 to position FetchPosition{offset=23, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Resetting offset for partition chat-messages-2 to position FetchPosition{offset=12, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
-2025-05-25 18:29:55 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Resetting offset for partition chat-messages-1 to position FetchPosition{offset=41, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
-2025-05-25 18:38:52 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-f804481a-0ec4-4590-afbc-91053ce0f13f-6, groupId=f804481a-0ec4-4590-afbc-91053ce0f13f] Node -1 disconnected.
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748212588396
+2025-05-26 04:06:28 INFO  [restartedMain] o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Subscribed to topic(s): chat-messages
+2025-05-26 04:06:28 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Cluster ID: BZRcDL7gSbCCinwOtiRz5w
+2025-05-26 04:06:28 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-05-26 04:06:28 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] (Re-)joining group
+2025-05-26 04:06:28 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Request joining group due to: need to re-join with the given member-id: consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5-d4533c70-0b45-4c88-aef8-4104a9e1dab8
+2025-05-26 04:06:28 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] (Re-)joining group
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Successfully joined group with generation Generation{generationId=1, memberId='consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5-d4533c70-0b45-4c88-aef8-4104a9e1dab8', protocol='range'}
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Finished assignment for group at generation 1: {consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5-d4533c70-0b45-4c88-aef8-4104a9e1dab8=Assignment(partitions=[chat-messages-0, chat-messages-1, chat-messages-2])}
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Successfully synced group in generation Generation{generationId=1, memberId='consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5-d4533c70-0b45-4c88-aef8-4104a9e1dab8', protocol='range'}
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Notifying assignor about the new Assignment(partitions=[chat-messages-0, chat-messages-1, chat-messages-2])
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Adding newly assigned partitions: chat-messages-0, chat-messages-1, chat-messages-2
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Found no committed offset for partition chat-messages-0
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Found no committed offset for partition chat-messages-2
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Found no committed offset for partition chat-messages-1
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Found no committed offset for partition chat-messages-0
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Found no committed offset for partition chat-messages-2
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Found no committed offset for partition chat-messages-1
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Resetting offset for partition chat-messages-0 to position FetchPosition{offset=35, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Resetting offset for partition chat-messages-2 to position FetchPosition{offset=30, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-05-26 04:06:31 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-ca66a308-47a8-45e8-96c4-f8ba5bea1301-5, groupId=ca66a308-47a8-45e8-96c4-f8ba5bea1301] Resetting offset for partition chat-messages-1 to position FetchPosition{offset=49, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.

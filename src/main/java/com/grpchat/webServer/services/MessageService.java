@@ -21,7 +21,6 @@ public class MessageService {
         this.objectMapper = objectMapper;
     }
     public List<MessageModel> getInitialMessages(String roomId){
-        List<MessageEntity> data= messageRepository.findByRoomId(roomId);
-        return data.stream().map(message-> objectMapper.convertValue(message,MessageModel.class)).collect(Collectors.toList());
+        return messageRepository.findByRoomIdOrderByTimestampAsc(roomId).stream().map(message-> objectMapper.convertValue(message,MessageModel.class)).collect(Collectors.toList());
     }
 }

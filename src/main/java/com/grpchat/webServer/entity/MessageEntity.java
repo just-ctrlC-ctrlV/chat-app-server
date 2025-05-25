@@ -26,19 +26,17 @@ public class MessageEntity {
     private String content;
     private LocalDateTime timestamp;
     private Boolean isFile;
-    private String fileName;
-    private String mimeType;
+    private String fileId;
     private String replyOn;
 
 
-    public MessageEntity(String sender, String content, String room, LocalDateTime timestamp,Boolean isFile,String fileName,String mimeType,String replyOn) {
+    public MessageEntity(String sender, String content, String room, LocalDateTime timestamp,Boolean isFile,String fileId,String replyOn) {
         this.senderId = sender;
         this.content = content;
         this.roomId = room;
         this.timestamp = timestamp;
         this.isFile = isFile;
-        this.fileName = fileName;
-        this.mimeType = mimeType;
+        this.fileId = fileId;
         this.replyOn = replyOn;
     }
 }

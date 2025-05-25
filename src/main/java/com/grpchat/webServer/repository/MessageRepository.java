@@ -6,5 +6,5 @@ import com.grpchat.webServer.entity.MessageEntity;
 import java.util.List;
 
 public interface MessageRepository extends JpaRepository<MessageEntity, Long> {
-    List<MessageEntity> findByRoomId(String roomId);
+    List<MessageEntity> findByRoomIdOrderByTimestampAsc(String roomId);
 }
