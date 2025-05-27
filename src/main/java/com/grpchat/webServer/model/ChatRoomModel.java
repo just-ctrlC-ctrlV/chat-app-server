@@ -12,4 +12,6 @@ public class ChatRoomModel {
     private Long roomId;
     @JsonProperty("name")
     private String roomName;
+    private String logo;
+    private String description;
 }

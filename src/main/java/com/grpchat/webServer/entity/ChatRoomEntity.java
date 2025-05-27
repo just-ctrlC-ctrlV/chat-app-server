@@ -17,4 +17,7 @@ public class ChatRoomEntity {
     private Long roomId;
     @JsonProperty("name")
     private String roomName;
+    @Column(columnDefinition = "TEXT")
+    private String logo;
+    private String description;
 }

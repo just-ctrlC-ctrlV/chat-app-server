@@ -1,0 +1,77 @@
+2025-05-27 16:48:38 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into users (email,encrypted_password,name,phone_number,profile_pic) values (?,?,?,?,?)
+2025-05-27 16:48:38 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 16:48:38 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:00:35 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:00:35 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:00:35 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?,?)
+2025-05-27 17:00:35 DEBUG [http-nio-8080-exec-9] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0
+2025-05-27 17:25:26 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:25:26 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:25:26 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - delete from user_chatrooms where user_id=?
+2025-05-27 17:25:26 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:25:26 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:25:26 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:25:26 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:25:26 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?,?,?)
+2025-05-27 17:25:26 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - select me1_0.id,me1_0.content,me1_0.file_id,me1_0.is_file,me1_0.reply_on,me1_0.room_id,me1_0.sender_id,me1_0.timestamp from messages me1_0 where me1_0.room_id=? order by me1_0.timestamp
+2025-05-27 17:26:12 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - select me1_0.id,me1_0.content,me1_0.file_id,me1_0.is_file,me1_0.reply_on,me1_0.room_id,me1_0.sender_id,me1_0.timestamp from messages me1_0 where me1_0.room_id=? order by me1_0.timestamp
+2025-05-27 17:26:40 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:26:40 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:26:40 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?)
+2025-05-27 17:26:40 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0
+2025-05-27 17:26:48 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:26:48 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:26:48 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - delete from user_chatrooms where user_id=?
+2025-05-27 17:26:48 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:26:48 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:26:48 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:26:48 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?,?)
+2025-05-27 17:26:48 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - select me1_0.id,me1_0.content,me1_0.file_id,me1_0.is_file,me1_0.reply_on,me1_0.room_id,me1_0.sender_id,me1_0.timestamp from messages me1_0 where me1_0.room_id=? order by me1_0.timestamp
+2025-05-27 17:28:58 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - select me1_0.id,me1_0.content,me1_0.file_id,me1_0.is_file,me1_0.reply_on,me1_0.room_id,me1_0.sender_id,me1_0.timestamp from messages me1_0 where me1_0.room_id=? order by me1_0.timestamp
+2025-05-27 17:29:03 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:29:03 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:29:03 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - delete from user_chatrooms where user_id=?
+2025-05-27 17:29:03 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:29:03 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:29:03 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:29:03 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:29:03 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?,?)
+2025-05-27 17:29:20 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - select me1_0.id,me1_0.content,me1_0.file_id,me1_0.is_file,me1_0.reply_on,me1_0.room_id,me1_0.sender_id,me1_0.timestamp from messages me1_0 where me1_0.room_id=? order by me1_0.timestamp
+2025-05-27 17:29:32 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:29:32 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:29:32 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?,?,?)
+2025-05-27 17:29:32 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0
+2025-05-27 17:32:30 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:32:30 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:32:30 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?)
+2025-05-27 17:32:30 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0
+2025-05-27 17:32:43 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:32:43 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:32:43 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?)
+2025-05-27 17:32:43 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0
+2025-05-27 17:35:25 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:35:25 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:35:25 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?)
+2025-05-27 17:35:25 DEBUG [http-nio-8080-exec-9] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0
+2025-05-27 17:35:30 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:35:30 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:35:30 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?)
+2025-05-27 17:35:30 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0
+2025-05-27 17:36:03 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:36:03 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:36:03 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?)
+2025-05-27 17:36:03 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0
+2025-05-27 17:39:37 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:39:37 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:39:37 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0 where cre1_0.room_id in (?,?)
+2025-05-27 17:39:37 DEBUG [http-nio-8080-exec-9] org.hibernate.SQL - select cre1_0.room_id,cre1_0.description,cre1_0.logo,cre1_0.room_name from chat_rooms cre1_0
+2025-05-27 17:47:56 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - insert into chat_rooms (description,logo,room_name) values (?,?,?)
+2025-05-27 17:49:27 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - insert into chat_rooms (description,logo,room_name) values (?,?,?)
+2025-05-27 17:52:09 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - insert into chat_rooms (description,logo,room_name) values (?,?,?)
+2025-05-27 17:53:30 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - insert into chat_rooms (description,logo,room_name) values (?,?,?)
+2025-05-27 17:53:30 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - select ue1_0.id,ue1_0.email,ue1_0.encrypted_password,ue1_0.name,ue1_0.phone_number,ue1_0.profile_pic from users ue1_0 where ue1_0.email=?
+2025-05-27 17:53:30 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - select stcr1_0.user_id,stcr1_0.chat_room from user_chatrooms stcr1_0 where stcr1_0.user_id=?
+2025-05-27 17:53:30 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - delete from user_chatrooms where user_id=?
+2025-05-27 17:53:30 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:53:30 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)
+2025-05-27 17:53:30 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - insert into user_chatrooms (user_id,chat_room) values (?,?)

@@ -23,10 +23,12 @@ public class MessageEntity {
     @JsonProperty("room")
     private String roomId;
     @JsonProperty("content")
+    @Column(columnDefinition = "TEXT")
     private String content;
     private LocalDateTime timestamp;
     private Boolean isFile;
     private String fileId;
+    @Column(columnDefinition = "TEXT")
     private String replyOn;
 
 
